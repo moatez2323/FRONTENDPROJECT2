@@ -1,13 +1,28 @@
 package com.moatez.firstrestapi.product.api.request;
 
-import jakarta.validation.constraints.NotBlank;
-
 public class ProductRequest {
 
-    @NotBlank(message = "Name cannot be blank")
     private String name;
+
+    private Double price;
+
+    private String category;
+
+    private String imageUrl;
 
     public String getName() {
         return name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 }

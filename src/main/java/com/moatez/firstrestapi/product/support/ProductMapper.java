@@ -9,13 +9,24 @@ import org.springframework.stereotype.Component;
 public class ProductMapper {
 
     public Product toEntity(ProductRequest request) {
-        return new Product(null, request.getName());
+
+        return new Product(
+                null,
+                request.getName(),
+                request.getPrice(),
+                request.getCategory(),
+                request.getImageUrl()
+        );
     }
 
     public ProductResponse toResponse(Product product) {
+
         return new ProductResponse(
                 product.getId(),
-                product.getName()
+                product.getName(),
+                product.getPrice(),
+                product.getCategory(),
+                product.getImageUrl()
         );
     }
 }

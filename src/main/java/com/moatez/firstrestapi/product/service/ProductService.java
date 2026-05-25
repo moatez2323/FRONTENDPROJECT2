@@ -52,6 +52,9 @@ public class ProductService {
                 );
 
         product.setName(request.getName());
+        product.setPrice(request.getPrice());
+        product.setCategory(request.getCategory());
+        product.setImageUrl(request.getImageUrl());
 
         Product savedProduct = productRepository.save(product);
 
